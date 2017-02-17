@@ -1,0 +1,8 @@
+<p>Create A Gif Below </p>
+byebug
+<%= form_for(@gif, url: gifs_path) do |f| %>
+<%= f.label :category %>
+<%= f.collection_select(:category_id, Category.all, :id, :title, options = {:prompt => "Category"}) %>
+<%= f.submit %>
+<% end %>
+
