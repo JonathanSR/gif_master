@@ -1,8 +1,10 @@
 <p>Create A Gif Below </p>
-byebug
-<%= form_for(@gif, url: gifs_path) do |f| %>
-<%= f.label :category %>
-<%= f.collection_select(:category_id, Category.all, :id, :title, options = {:prompt => "Category"}) %>
-<%= f.submit %>
+
+<p> Enter A Search Term:</p>
+<%= form_tag(gifs_path) do %>
+  <%= label_tag :search %>
+  <%= text_field_tag :search %>
+  <%= submit_tag "Generate Gif" %>
 <% end %>
+
 

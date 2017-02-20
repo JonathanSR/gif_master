@@ -1,0 +1,12 @@
+<p><%=@user.name%> Favorites List</p>
+
+
+<%@favorites.each do |fav|%>
+<li>
+  <ol>
+<%=link_to "#{fav.gif.category.title}", category_path(fav.gif.category)%></br>
+<img src="<%=fav.gif.image_path%>"/>
+
+  </ol>
+<l1>
+<% end %>

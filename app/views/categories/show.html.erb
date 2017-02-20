@@ -1,3 +1,11 @@
 <h1><%=@category.title%></h1>
 
-<%=link_to "Delete Category", category_path(@category), method: :delete%>
+<% @category.gifs.each do |gif| %>
+<img src="<%= gif.image_path %>"/> 
+<%= link_to "Favorite", favorites_path(gif_id: gif.id), method: :post %> 
+<%= link_to "Unfavorite", favorite_path(gif_id: gif.id), method: :delete%><br>
+<% end %>
+
+
+<%=link_to "Delete Category", category_path(@category), method: :delete%></br>
+<%= link_to "Return To Categories Index", categories_path %>

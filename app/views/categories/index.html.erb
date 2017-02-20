@@ -1,3 +1,14 @@
 <p> GIF Cagetories Central </p>
-
+<br/>
+<br/>
+<p>Click on a Category Link to see all Gifs</p>
+<br/>
+<br/>
+<% @categories.each do |category| %>
+  <li>
+      <ul>
+        <%=link_to category.title, category_path(category) %> <%= link_to "Delete", category_path(category), method: :delete, id: "category_#{category.title}" %>
+        </ul>
+      </li>
+<% end %>
 <%=link_to "Add GIF", new_gif_path %>

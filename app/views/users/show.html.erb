@@ -1,4 +1,11 @@
-<h1> Welcome </h1>
-<p><%=@user.name%> </p>
-
+<p> Welcome </p>
+<h1><%=@user.name%> </h1>
+<br/>
+<br/>
+<p> Click the link below to see all categories</p>
+<%= link_to "view gif categories", categories_path%>
+<br/>
+<br/>
+<p> Click the link below to see a list of your favorite gifs</p>
+<%= link_to "View Favorite Gifs", favorites_path%>
 <%= button_to "logout", logout_path, method: :delete %>
