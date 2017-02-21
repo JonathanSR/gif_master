@@ -17,4 +17,17 @@ describe Gif do
       expect(gif).to be_valid
     end
   end
+
+  context "valid associations to category" do
+    it {should belong_to (:category) }
+  end
+
+  context "valid associations to favorites" do
+    it {should have_many (:favorites)} 
+  end
+
+  context "valid associations to user" do
+    it {should have_many (:users)}
+  end
+  
 end
