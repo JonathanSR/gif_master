@@ -9,6 +9,9 @@ helper_method :current_admin?
     @user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
+  def user!
+    render file: '/public/404' unless current_user
+  end
 
   def current_admin?
     current_user && current_user.admin?

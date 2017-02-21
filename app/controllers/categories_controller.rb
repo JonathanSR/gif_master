@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
  before_action :authorize!, only: [:new, :create, :destroy]
+before_action :user!, only: [:index, :show]
 
  def new
    @category = Category.new

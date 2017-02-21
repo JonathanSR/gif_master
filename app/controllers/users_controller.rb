@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :user!, only: [:show]
 
   def new
     @user = User.new

@@ -1,4 +1,5 @@
 class FavoritesController < ApplicationController
+before_action :user!, only: [:index, :create, :destroy]
 
   def index
    @user = current_user
