@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+.welcome {
+  text-align: center;
+  text-shadow:1px 1px #000000;
+  color: darkred;
+}
+
+.creategif {
+  text-align: left;
+  text-shadow:1px 1px #000000;
+  color: darkred;
+}
+
+#name{
+  text-align: center;
+  font-size: 30px;
+  text-shadow:1px 1px #211111;
+}
+
+#list{
+  text-align :left;
+  font-size: 25px;
+  text-shadow:.2px .2px #211111;
+  
+}
+
+.link{
+  font-size:23px;
+ 
+}
+

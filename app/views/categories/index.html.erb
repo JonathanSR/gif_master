@@ -1,14 +1,19 @@
-<p> GIF Cagetories Central </p>
+<h2  class ="welcome"> GIF Cagetories Central </h2>
 <br/>
 <br/>
-<p>Click on a Category Link to see all Gifs</p>
+<p id ="list">Click on a Category Link to see all Gifs</p>
 <br/>
 <br/>
 <% @categories.each do |category| %>
-  <li>
-      <ul>
-        <%=link_to category.title, category_path(category) %> <%= link_to "Delete", category_path(category), method: :delete, id: "category_#{category.title}" %>
-        </ul>
-      </li>
+<div class="row">
+      <div class="col s12 m5">
+        <div class="card-panel grey lighten-5">
+       <p class = "link"> <%=link_to category.title, category_path(category) %> </p>
+       <%= link_to "Delete", category_path(category), method: :delete, id: "category_#{category.title}" %>
+     </div>
+     </div>
+     </div>
+  
 <% end %>
+
 <%=link_to "Add GIF", new_gif_path %>

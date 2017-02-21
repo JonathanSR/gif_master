@@ -1,9 +1,15 @@
-<h1><%=@category.title%></h1>
+<h2 class="welcome"><%=@category.title%></h2>
 
 <% @category.gifs.each do |gif| %>
+<div class="row">
+      <div class="large">
+        <div class="card-panel grey lighten-5">
 <img src="<%= gif.image_path %>"/> 
 <%= link_to "Favorite", favorites_path(gif_id: gif.id), method: :post %> 
 <%= link_to "Unfavorite", favorite_path(gif_id: gif.id), method: :delete%><br>
+</div>
+</div>
+</div>
 <% end %>
 
 

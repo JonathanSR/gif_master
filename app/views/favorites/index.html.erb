@@ -1,12 +1,13 @@
-<p><%=@user.name%> Favorites List</p>
+<h1 class= "welcome"><%=@user.name%> Favorites List</h1>
 
 
 <%@favorites.each do |fav|%>
-<li>
-  <ol>
-<%=link_to "#{fav.gif.category.title}", category_path(fav.gif.category)%></br>
-<img src="<%=fav.gif.image_path%>"/>
-
-  </ol>
-<l1>
+<div class="row">
+  <div class="large">
+     <div class="card-panel grey lighten-5">
+      <%=link_to "#{fav.gif.category.title}", category_path(fav.gif.category)%></br>
+      <img src="<%=fav.gif.image_path%>"/>
+    </div>
+  </div>
+</div>
 <% end %>

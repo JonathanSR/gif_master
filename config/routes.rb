@@ -11,7 +11,7 @@ root 'users#new'
   resources :gifs, only: [:new, :index, :create]
 
   namespace :admin do
-    resources :users, only:[:index]
+    resources :users , only:[:index]
   end
 
   get 'sign_up', to: 'users#new'

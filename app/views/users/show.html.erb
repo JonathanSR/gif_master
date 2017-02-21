@@ -1,11 +1,15 @@
-<p> Welcome </p>
-<h1><%=@user.name%> </h1>
+<h2 class= "welcome"> Welcome </h2>
+<h3 id ="name"><%=@user.name%> </h3>
 <br/>
 <br/>
+<div class = "card-panel teal lighten-2">
 <p> Click the link below to see all categories</p>
 <%= link_to "view gif categories", categories_path%>
+</div>
 <br/>
 <br/>
+<div class = "card-panel teal lighten-2">
 <p> Click the link below to see a list of your favorite gifs</p>
 <%= link_to "View Favorite Gifs", favorites_path%>
+</div>
 <%= button_to "logout", logout_path, method: :delete %>
